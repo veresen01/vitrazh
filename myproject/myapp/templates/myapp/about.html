@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+{% for item in page_obj %}
+<p>{{ item.pk }}: {{ item.title }}</p>
+{% endfor %}
+
+<nav>
+    <ul>
+        {% for p in page_obj.paginator.page_range %}
+        <li>
+            <a href="?page={{ p }}">{{ p }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+{% comment %}
+<!--{% extends 'base.html' %}-->
+
+
+<!--{% block content %}-->
+<!--<h1>{{title}}</h1>-->
+<!--<form action="" method="post" enctype="multipart/form-data">  &lt;!&ndash; enctype="multipart/form-data" для загррузки файлов на сервер&ndash;&gt;-->
+<!--{% csrf_token %}-->
+<!--&lt;!&ndash;<p> <input type="file" name="file_upload"></p>&ndash;&gt;-->
+<!--    {{ form.as_p }}-->
+<!--<p><button type="submit">Отправить</button></p>-->
+<!--</form>-->
+<!--{% endblock %}-->
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>{{title}}</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;Меню&ndash;&gt;-->
+<!--<ul>-->
+<!--    <li><a href="{% url 'index' %}">Главная страница</a></li>-->
+<!--    {% for m in menu %}-->
+<!--    {% if not forloop.last %} <li>{% else %}<li class="last">{% endif %} &lt;!&ndash;    если последний пункт в меню, то class="last"&ndash;&gt;-->
+<!--        <a href="{% url m.url_name%}"> {{m.title}}</a>-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--&lt;!&ndash;старое меню&ndash;&gt;-->
+<!--&lt;!&ndash;<p>{{ menu|join:" | "}}</p>  &lt;!&ndash;из списка menu склеивает элементы с разделителем " | "&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<h1>{{title}}</h1>&ndash;&gt;-->
+<!--<h1>{{title}}</h1>-->
+
+<!--</body>-->
+<!--</html>-->
+{% endcomment %}

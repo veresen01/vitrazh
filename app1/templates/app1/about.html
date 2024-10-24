@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="container">
+    <div class="wrap-container">
+        <!-----------------Content-Box-------------------->
+        <article class="single-post zerogrid">
+            <div class="row wrap-post"><!--Start Box-->
+                <div class="entry-header">
+                    <span class="time">{% now "D d M Y" %}</span>
+                    <h1 class="entry-title">{{ master.fio }}</h1>
+
+                </div>
+                <div class="post-thumbnail-wrap">
+                    <img src="{{ master.photo.url }}">
+                </div>
+                <div class="entry-content">
+                    <div class="excerpts"><p>{{ master.biography }}</p></div>
+
+                    <div class="entry-content">
+
+
+                        <blockquote><p>{{ master.biography }}</p></blockquote>
+
+                        <h2>Heading 1</h2>
+
+
+
+
+
+
+
+                        <p>{{ master.biography }}</p>
+                        <div class="note">
+                            <ol>
+                                <li>Lorem ipsum</li>
+                                <li>Sit amet vultatup nonumy</li>
+                                <li>Duista sed diam</li>
+                            </ol>
+                            <div class="clear"></div>
+                        </div>
+                        <p>{{ master.biography }}</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="container">
+    <div class="wrap-container">
+        <!-----------------Content-Box-------------------->
+        <article class="single-post zerogrid">
+            <div class="row wrap-post"><!--Start Box-->
+                <div class="entry-header">
+
+                    <h1 class="entry-title">{{ contact.phone }}</h1>
+                    <br>
+
+                    <h1 class="entry-title">{{ contact.email }}</h1>
+
+                </div>
+
+                <div class="entry-content">
+
+
+                    <div class="entry-content">
+
+
+                        <p>{{contact.adress }}</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+

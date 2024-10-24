@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="container">
+			<div class="wrap-container">
+				<!-----------------Content-Box-------------------->
+				<article class="single-post zerogrid">
+					<div class="row wrap-post"><!--Start Box-->
+						<div class="entry-header">
+							<span class="time">{% now "D d M Y" %}</span>
+							<h1 class="entry-title">{{ indexx.title }}</h1>
+
+						</div>
+						<div class="post-thumbnail-wrap">
+							<img src="{{ randomm.image.url }}" alt="" />
+						</div>
+						<div class="entry-content">
+							<div class="excerpt"><p>{{ indexx.one }}</p></div>
+
+							<blockquote><p>{{ indexx.two }}</p></blockquote>
+							{{ indexx.three }}</p>
+							<h2>Heading 1</h2>
+							<p>{{ indexx.seven }}</p>
+
+							<h2>Heading 2</h2>
+							<p>{{ indexx.four }}</p>
+							<p><code>{{ indexx.five }}</code></p>
+							<p>{{ indexx.six }}</p>
+							<div class="note">
+							  <ol>
+								<li>Lorem ipsum</li>
+								<li>Sit amet vultatup nonumy</li>
+								<li>Duista sed diam</li>
+							  </ol>
+							  <div class="clear"></div>
+							</div>
+							<p>{{ indexx.eight }}</p>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</section>
+{% endblock %}
+

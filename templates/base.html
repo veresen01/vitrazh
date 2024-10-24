@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ title }}</title>
+
+	<link href="{% static 'app1/css/zerogrid.css' %}" rel="stylesheet">
+	<link href="{% static 'app1/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'app1/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'app1/css/menu.css' %}" rel="stylesheet">
+	<link href="{% static 'app1/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static 'app1/css/styles.css' %}" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+		<header class="main-header">
+			<div class="zerogrid">
+				<!--Top-->
+
+				<div class="t-center">
+					<a class="site-branding" href="{% url 'index' %}">
+						Витражи от Алексеева
+<!--						<img src="images/logo.png" width="300px"/>-->
+					</a><!-- .site-branding -->
+
+					<!-- Menu-main -->
+					<div id='cssmenu' class="align-center">
+						<ul>
+						   <li><a href="{% url 'index' %}"><span>Главная</span></a></li>
+						   <li><a href="{% url 'about' %}"><span>О нас</span></a></li>
+						   <li><a href="{% url 'galery' %}"><span>Галерея</span></a></li>
+						   <li><a href="{% url 'contact' %}"><span>Контакты</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+{% block content %}
+{% endblock %}
+		<!--////////////////////////////////////Footer-->
+		<footer>
+			<div class="zerogrid wrap-footer">
+				<div class="row">
+					<div class="bottom-social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+						<a href="#"><i class="fa fa-vimeo"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- carousel -->
+		<script src="owl-carousel/owl.carousel.js"></script>
+		<script>
+		$(document).ready(function() {
+		  $("#owl-slide").owlCarousel({
+			autoPlay: 3000,
+			items : 1,
+			itemsDesktop : [1199,1],
+			itemsDesktopSmall : [979,1],
+			itemsTablet : [768, 1],
+			itemsMobile : [479, 1],
+			navigation: true,
+			navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+			pagination: false
+		  });
+		});
+		</script>
+
+
+
+<script src="{% static 'app1/js/jquery1111.min.js' %}"></script>
+<script src="{% static 'app1/js/script.js' %}"></script>
+
+</body>
+</html>
